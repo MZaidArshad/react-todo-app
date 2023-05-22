@@ -1,38 +1,116 @@
-.App {
-  text-align: center;
+body {
+  box-sizing: border-box;
+  background-color: #020620;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.main_div {
+  width: 100%;
+  height: 100vh;
   display: flex;
   flex-direction: column;
+  justify-content: left;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.child-div {
+  max-width: 80%;
+  min-width: 350px;
+  text-align: center;
+  margin-top: 50px;
+  color: #ffff;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.child-div img {
+  width: 70px;
+  border-radius: 5px;
+}
+.child-div figcaption {
+  font-size: 18px;
+  margin-top: 5px;
+}
+
+.add_todo {
+  display: flex;
+  align-items: center;
+  padding: 3px 5px;
+  background: #ffff;
+  color: #020620;
+  border-radius: 5px;
+}
+
+.add_todo input {
+  width: 100%;
+  padding: 0 10px;
+  font-size: 18px;
+  background: transparent;
+  border: none;
+}
+
+.add_todo input:focus {
+  outline: none;
+  border: none;
+}
+
+.add_todo i {
+  margin-left: 5px;
+  padding: 5px;
+  font-size: 22px;
+  cursor: pointer;
+}
+
+.add_todo i:hover {
+  color: #1d2346;
+}
+
+.todos_container {
+  padding: 20px 0;
+}
+
+.todoItem {
+  display: flex;
+  align-items: center;
+  background-color: #5435dd;
+  color: #ffff;
+  padding: 8px 10px;
+  margin-bottom: 5px;
+  border-radius: 5px;
+  transition: ease 0.4s;
+}
+
+.todoItem:hover {
+  color: #5435dd;
+  background-color: #ffff;
+}
+
+.todoItem p {
+  width: 100%;
+  text-align: left;
+  margin: 0;
+  font-weight: bold;
+}
+
+.todoItem_btns {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.todoItem_btns i {
+  cursor: pointer;
+}
+
+.remove_btn button {
+  padding: 9px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  cursor: pointer;
+  color: #020620;
+  border: none;
+  transition: all 0.4s;
+}
+
+.remove_btn button:hover {
+  background-color: #5435dd;
+  color: #ffff;
 }
